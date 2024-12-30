@@ -1,10 +1,10 @@
 @font-face {
     font-family: gofteh;
     font-style: normal;
-    font-weight: 400;
-    src: url("Gofteh-Heavy.woff2") format("woff2"),
-    url("Gofteh-Heavy.woff") format("woff"),
-    url("Gofteh-Heavy.ttf") format("truetype");
+    font-weight: 500;
+    src: url("https://cdn.yektanet.com/assets/fonts/gofteh/Gofteh-Heavy.woff2") format("woff2"),
+    url("https://cdn.yektanet.com/assets/fonts/gofteh/Gofteh-Heavy.woff") format("woff"),
+    url("https://cdn.yektanet.com/assets/fonts/gofteh/Gofteh-Heavy.ttf") format("truetype");
 }
 
 
@@ -42,7 +42,6 @@ body {
     justify-content: center;
     margin-bottom: 10px;
 }
-
 
 .logo {
     max-width: 200px;

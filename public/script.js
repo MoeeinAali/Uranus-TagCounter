@@ -36,7 +36,7 @@ function renderDashboard() {
         <table>
             <thead>
                 <tr>
-                    <th style="text-align: center" ">تعداد رخ‌داد</th>
+                    <th style="text-align: center" ">تعداد رخداد</th>
                     <th>تگ</th>
                 </tr>
             </thead>
@@ -46,7 +46,7 @@ function renderDashboard() {
     for (const key in counters) {
         html += `
             <tr>
-                <td style="text-align: center">${sanitizeHTML(counters[key])}</td>
+                <td style="text-align: center">${sanitizeHTML(replaceEnglishNumbersWithPersian(counters[key]))}</td>
                 <td>${sanitizeHTML(map_key_tag[key])}</td>
             </tr>
         `;
@@ -64,4 +64,21 @@ function sanitizeHTML(str) {
     const temp = document.createElement('div');
     temp.textContent = str;
     return temp.innerHTML;
+}
+
+function replaceEnglishNumbersWithPersian(inputString) {
+    const englishToPersianDigits = {
+        '0': '\u06F0',
+        '1': '\u06F1',
+        '2': '\u06F2',
+        '3': '\u06F3',
+        '4': '\u06F4',
+        '5': '\u06F5',
+        '6': '\u06F6',
+        '7': '\u06F7',
+        '8': '\u06F8',
+        '9': '\u06F9'
+    };
+
+    return inputString.split('').map(char => englishToPersianDigits[char] || char).join('');
 }
