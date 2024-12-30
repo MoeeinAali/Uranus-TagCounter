@@ -30,8 +30,6 @@ const allowedKeys = [
     'key6',
     'key7',
     'key8',
-    'key9',
-    'key10',
     'key11',
     'key12',
 ];
