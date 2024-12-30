@@ -15,7 +15,7 @@
 }
 
 body {
-    font-family: gofteh,Arial, sans-serif;
+    font-family: gofteh, Arial, sans-serif;
     background-image: url('space.png');
     background-size: cover;
     background-position: center;
@@ -29,7 +29,7 @@ body {
 
 .container {
     background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     max-width: 800px;
     width: 100%;
@@ -37,13 +37,15 @@ body {
 }
 
 .logo-container {
+    /*border: 1px solid red;*/
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
+
 .logo {
-    max-width: 150px;
+    max-width: 200px;
     height: auto;
 }
 
@@ -93,6 +95,7 @@ tr:hover {
     }
 
     .logo {
-        max-width: 100px;
+        max-width: 150px;
     }
 }
+
