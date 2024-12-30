@@ -9,12 +9,15 @@ services:
       - /usr/src/app/node_modules
     depends_on:
       - redis
+    restart: always
+
   redis:
     image: docker.arvancloud.ir/redis:latest
     ports:
       - "6379:6379"
     volumes:
       - redis-data:/data
+    restart: always
 
 volumes:
   redis-data:
