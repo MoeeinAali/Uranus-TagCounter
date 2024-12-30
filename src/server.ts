@@ -21,7 +21,17 @@ const redisClient = createClient({
     url: 'redis://redis:6379'
 });
 
-const allowedKeys = ['key1', 'key2', 'key3', 'key4', 'key5'];
+const allowedKeys = [
+    'key1',
+    'key2',
+    'key3',
+    'key4',
+    'key5',
+    'key6',
+    'key7',
+    'key8',
+    'key9',
+    'key10',];
 
 (async () => {
     try {
