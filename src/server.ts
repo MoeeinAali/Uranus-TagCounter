@@ -2,9 +2,14 @@ import express, {Request, Response} from 'express';
 import {createServer} from 'http';
 import {Server as SocketServer, Socket} from 'socket.io';
 import {createClient} from 'redis';
+import cors from 'cors';
 
 const app = express();
 const httpServer = createServer(app);
+
+app.use(cors({
+    origin: '*',
+}));
 
 const io = new SocketServer(httpServer, {
     cors: {
@@ -15,6 +20,7 @@ const io = new SocketServer(httpServer, {
 const redisClient = createClient({
     url: 'redis://redis:6379'
 });
+
 const allowedKeys = ['key1', 'key2', 'key3', 'key4', 'key5'];
 
 (async () => {

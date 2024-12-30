@@ -7,8 +7,12 @@ const express_1 = __importDefault(require("express"));
 const http_1 = require("http");
 const socket_io_1 = require("socket.io");
 const redis_1 = require("redis");
+const cors_1 = __importDefault(require("cors"));
 const app = (0, express_1.default)();
 const httpServer = (0, http_1.createServer)(app);
+app.use((0, cors_1.default)({
+    origin: '*',
+}));
 const io = new socket_io_1.Server(httpServer, {
     cors: {
         origin: '*',
