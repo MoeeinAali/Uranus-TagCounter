@@ -34,8 +34,8 @@ function renderDashboard() {
         <table>
             <thead>
                 <tr>
-                    <th>تگ</th>
                     <th>تعداد رخ‌داد</th>
+                    <th>تگ</th>
                 </tr>
             </thead>
             <tbody>
@@ -44,8 +44,8 @@ function renderDashboard() {
     for (const key in counters) {
         html += `
             <tr>
-                <td>${sanitizeHTML(map_key_tag[key])}</td>
                 <td>${sanitizeHTML(counters[key])}</td>
+                <td>${sanitizeHTML(map_key_tag[key])}</td>
             </tr>
         `;
     }
