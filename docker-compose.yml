@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3.9'
 services:
   app:
     build: .
@@ -10,6 +10,11 @@ services:
     depends_on:
       - redis
   redis:
-    image: "redis:latest"
+    image: docker.arvancloud.ir/redis:latest
     ports:
       - "6379:6379"
+    volumes:
+      - redis-data:/data
+
+volumes:
+  redis-data:
