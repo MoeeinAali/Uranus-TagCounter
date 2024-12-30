@@ -31,7 +31,10 @@ const allowedKeys = [
     'key7',
     'key8',
     'key9',
-    'key10',];
+    'key10',
+    'key11',
+    'key12',
+];
 
 (async () => {
     try {

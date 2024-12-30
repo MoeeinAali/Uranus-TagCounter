@@ -1,14 +1,16 @@
 const map_key_tag = {
-    "key1": "لود شدن تبلیغ",
+    "key1": "مشاهده تبلیغ",
     "key2": "کلیک روی نقطه",
-    "key3": "کلیک روی نقطه دوم",
-    "key4": "کلیک روی نقطه سوم",
-    "key5": "دیدن اورانوس",
-    "key6": "بازی با مدل سه‌بعدی اورانوس",
-    "key7": "بازی با مدل سه‌بعدی نقطه",
-    "key8": "دیدن ویدیو",
+    "key3": "کلیک روی نقطه‌ دوم",
+    "key4": "کلیک روی نقطه‌ سوم",
+    "key5": "دیدن مدل سه‌بعدی اورانوس",
+    "key6": "چرخاندنِ مدل سه‌بعدی اورانوس",
+    "key7": "چرخاندنِ مدل سه‌بعدی نقطه",
+    "key8": "مشاهده‌ی ویدیو",
     "key9": "کلیک روی مدل سه‌بعدی نقطه",
     "key10": "کلیک روی مدل سه‌بعدی اورانوس",
+    "key11": "بازدید ۱۵ ثانیه",
+    "key12": "رفتن به لندینگ"
 }
 
 const socket = io();
@@ -34,7 +36,7 @@ function renderDashboard() {
         <table>
             <thead>
                 <tr>
-                    <th>تعداد رخ‌داد</th>
+                    <th style="text-align: center" ">تعداد رخ‌داد</th>
                     <th>تگ</th>
                 </tr>
             </thead>
@@ -44,7 +46,7 @@ function renderDashboard() {
     for (const key in counters) {
         html += `
             <tr>
-                <td>${sanitizeHTML(counters[key])}</td>
+                <td style="text-align: center">${sanitizeHTML(counters[key])}</td>
                 <td>${sanitizeHTML(map_key_tag[key])}</td>
             </tr>
         `;
